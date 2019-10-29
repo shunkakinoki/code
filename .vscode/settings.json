@@ -23,4 +23,5 @@
     "files.exclude": {
         "**/*.out": true,
     },
+    "cSpell.enabled": false,
 }
