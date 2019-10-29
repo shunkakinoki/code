@@ -2,6 +2,7 @@ pull_request_rules:
   - name: Automatic Merge for shunkakinoki Pull Requests
     conditions:
       - author=shunkakinoki
+      - status-success=
       - status-success=WIP
     actions:
       merge:
