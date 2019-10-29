@@ -3,6 +3,11 @@ on:
   push:
     paths:
       - "**.cpp"
+    branch:
+      - master
+  pull_request:
+    paths:
+      - "**.cpp"
 jobs:
   cpp:
     runs-on: ubuntu-latest
