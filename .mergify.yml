@@ -2,7 +2,6 @@ pull_request_rules:
   - name: Automatic Merge for shunkakinoki Pull Requests
     conditions:
       - author=shunkakinoki
-      - status-success=Cpplint / cpp (pull_request)
       - status-success=WIP
     actions:
       delete_head_branch:
