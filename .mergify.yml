@@ -5,9 +5,9 @@ pull_request_rules:
       - status-success=Cpplint / cpp (pull_request)
       - status-success=WIP
     actions:
+      delete_head_branch:
+        force: true
       merge:
-        delete_head_branch:
-          force: true
         method: merge
         strict: true
 
@@ -16,9 +16,9 @@ pull_request_rules:
       - author=github-actions[bot]
       - status-success=WIP
     actions:
+      delete_head_branch:
+        force: true
       merge:
-        delete_head_branch:
-          force: true
         method: merge
         strict: true
 
@@ -27,9 +27,9 @@ pull_request_rules:
       - author=dependabot[bot]
       - status-success=WIP
     actions:
+      delete_head_branch:
+        force: true
       merge:
-        delete_head_branch:
-          force: true
         method: merge
         strict: true
 
@@ -38,8 +38,8 @@ pull_request_rules:
       - author=dependabot-preview[bot]
       - status-success=WIP
     actions:
+      delete_head_branch:
+        force: true
       merge:
-        delete_head_branch:
-          force: true
         method: merge
         strict: true
