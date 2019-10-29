@@ -7,6 +7,9 @@ pull_request_rules:
     actions:
       merge:
         method: merge
+        strict: True
+    delete_head_branch:
+      force: True
 
   - name: Automatic Merge for gitHub-actions[bot] Pull Requests
     conditions:
@@ -15,6 +18,9 @@ pull_request_rules:
     actions:
       merge:
         method: merge
+        strict: True
+    delete_head_branch:
+      force: True
 
   - name: Automatic Merge for dependabot[bot] Pull Requests
     conditions:
@@ -23,6 +29,9 @@ pull_request_rules:
     actions:
       merge:
         method: merge
+        strict: True
+    delete_head_branch:
+      force: True
 
   - name: Automatic Merge for dependabot-preview[bot] Pull Requests
     conditions:
@@ -31,3 +40,6 @@ pull_request_rules:
     actions:
       merge:
         method: merge
+        strict: True
+    delete_head_branch:
+      force: True
