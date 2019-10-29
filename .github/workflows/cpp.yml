@@ -1,10 +1,10 @@
 name: Cpplint
 on:
   push:
+    branches:
+      - master
     paths:
       - "**.cpp"
-    branch:
-      - master
   pull_request:
     paths:
       - "**.cpp"
