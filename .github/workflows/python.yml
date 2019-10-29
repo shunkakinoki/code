@@ -1,10 +1,10 @@
 name: Python Check Format, Sorting, and Type-Check
 on:
   push:
+    branches:
+      - master
     paths:
       - "**.py"
-    branch:
-      - master
   pull_request:
     paths:
       - "**.py"
