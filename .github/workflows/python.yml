@@ -3,6 +3,11 @@ on:
   push:
     paths:
       - "**.py"
+    branch:
+      - master
+  pull_request:
+    paths:
+      - "**.py"
 jobs:
   build:
     runs-on: ubuntu-latest
