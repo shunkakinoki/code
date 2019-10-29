@@ -1,4 +1,4 @@
 * @shunkakinoki
 
-Pipfile @dependabot[bot] @dependabot-preview[bot]
-Pipfile.lock @dependabot[bot] @dependabot-preview[bot]
+Pipfile @shunkakinoki @dependabot[bot] @dependabot-preview[bot]
+Pipfile.lock @shunkakinoki @dependabot[bot] @dependabot-preview[bot]
