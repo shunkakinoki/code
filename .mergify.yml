@@ -11,10 +11,23 @@ pull_request_rules:
         method: merge
         strict: true
 
+  - name: Automatic Merge for shunkakinoki Pull Requests
+    conditions:
+      - author=shunkakinoki
+      - label=gha-python
+      - status-success=WIP
+    actions:
+      delete_head_branch:
+        force: true
+      merge:
+        method: merge
+        strict: true
+
   - name: Automatic Merge for dependabot[bot] Pull Requests
     conditions:
       - author=dependabot[bot]
       - label=gha-cpp
+      - label=gha-python
       - status-success=WIP
     actions:
       delete_head_branch:
@@ -27,6 +40,7 @@ pull_request_rules:
     conditions:
       - author=dependabot-preview[bot]
       - label=gha-cpp
+      - label=gha-python
       - status-success=WIP
     actions:
       delete_head_branch:
