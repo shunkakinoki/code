@@ -1,5 +1,12 @@
 name: Cpplint
 on:
+  push:
+    branches:
+      - master
+    paths:
+      - "**.cpp"
+      - "Pipfile"
+      - "Pipfile.lock"
   pull_request:
     paths:
       - "**.cpp"
