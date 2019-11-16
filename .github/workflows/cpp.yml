@@ -1,4 +1,4 @@
-name: Cpplint
+name: Cpp
 on:
   push:
     branches:
