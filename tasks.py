@@ -16,3 +16,9 @@ def format(c):
 @task
 def libs(c):
     c.run("pipenv run pip list -o")
+
+
+@task
+def rust(c):
+    c.run("cargo fmt -- --check")
+    c.run("cargo clippy -- -D warnings")
