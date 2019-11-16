@@ -7,3 +7,8 @@ authors = ["Shun Kakinoki <shunkakinoki@gmail.com>"]
 [[bin]]
 name = "coding"
 path = "rust/src/main.rs"
+
+
+[dependencies]
+clippy = { version = "*", optional = true }
+fmt = {version = "*", optional = true}
