@@ -28,6 +28,7 @@
     /// FILES
     "files.exclude": {
         "**/*.out": true,
+        "**/target/**": true
     },
     /// SPELLING
     "cSpell.enabled": false
