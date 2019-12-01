@@ -1,19 +1,7 @@
 name: Python
-on:
-  push:
-    branches:
-      - master
-    paths:
-      - "**.py"
-      - "Pipfile"
-      - "Pipfile.lock"
-  pull_request:
-    paths:
-      - "**.py"
-      - "Pipfile"
-      - "Pipfile.lock"
+on: push
 jobs:
-  build:
+  python:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
@@ -42,8 +30,3 @@ jobs:
       - name: Run test with Tox
         run: |
           pipenv run tox -e libs,flake8,mypy,format -p all
-      - name: Label on PR
-        uses: awact/label-action@master
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          ADD_LABEL: "gha-python"
