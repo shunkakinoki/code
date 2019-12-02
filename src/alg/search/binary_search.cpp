@@ -1,7 +1,10 @@
 // Copyright 2019 Shun Kakinoki.
+// Reference:
+// https://github.com/TheAlgorithms/C-Plus-Plus/blob/master/search/Binary%20Search.cpp
 
 #include <iostream>
 using namespace std;
+
 int binary_search(int a[], int l, int r, int key) {
   while (l <= r) {
     int m = l + (r - l) / 2;
@@ -14,17 +17,21 @@ int binary_search(int a[], int l, int r, int key) {
   }
   return -1;
 }
+
 int main(int argc, char const *argv[]) {
   int n, key;
   cout << "Enter size of array: ";
   cin >> n;
   cout << "Enter array elements: ";
-  int a[n];
+
+  int a[n];  // NOLINT(runtime/arrays)
   for (int i = 0; i < n; ++i) {
     cin >> a[i];
   }
+
   cout << "Enter search key: ";
   cin >> key;
+
   int res = binary_search(a, 0, n - 1, key);
   if (res != -1)
     cout << key << " found at index " << res << endl;
