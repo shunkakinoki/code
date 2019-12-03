@@ -24,8 +24,7 @@ python_version = "3.7"
 
 [scripts]
 check = "invoke check"
+cpp = "tox -e cpplint"
 format = "invoke format"
 libs = "invoke libs"
-rust = "invoke rust"
 test = "tox -p all"
-rustenv = "rustenv .renv"
