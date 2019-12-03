@@ -14,5 +14,14 @@
             ""
         ],
         "description": "Cpp Coding Template"
+    },
+    "Copyright": {
+        "scope": "cop",
+        "prefix": "cop",
+        "body": [
+            "// Copyright 2019 Shun Kakinoki.",
+            "",
+        ],
+        "description": "Cpp Copyright Template"
     }
 }
