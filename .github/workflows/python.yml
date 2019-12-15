@@ -17,16 +17,16 @@ jobs:
         id: cache
         uses: actions/cache@v1
         with:
-          path: .venv
+          path: ~/.cache/pip
           key: pipenv-${{ hashFiles('**/Pipfile.lock') }}
           restore-keys: |
             pipenv-
       - name: Install dependencies with pipenv
         if: steps.cache.outputs.cache-hit != 'true'
         run: |
-          pipenv sync --dev
+          pipenv install --dev --system --ignore-pipfile --deploy
         env:
           PIPENV_VENV_IN_PROJECT: true
       - name: Run test with Tox
         run: |
-          pipenv run tox -e libs,flake8,mypy,format -p all
+          tox -e libs,flake8,mypy,format -p all
