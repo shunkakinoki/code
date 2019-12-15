@@ -22,7 +22,7 @@ jobs:
           restore-keys: |
             pipenv-
       - name: Install dependencies with pipenv
-        if: steps.cache.outputs.cache-hit != 'true'
+        # if: steps.cache.outputs.cache-hit != 'true'
         run: |
           pipenv install --dev --system --ignore-pipfile --deploy
         env:
